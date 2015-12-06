@@ -1,0 +1,160 @@
+var express = require('express');
+var app= express();
+var request = require("request");
+var cheerio = require("cheerio");
+var mysql = require('mysql');
+
+//Initialise database
+var DBConnection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'sa@1234',
+    database: 'nodescraper'
+});
+
+DBConnection.connect(function (err) {
+   if(err)
+    console.log(err);
+});
+
+
+app.get('/',function(req,res){
+    res.send('hello express test');
+});
+
+app.get('/getAllLink/',function(req,res){
+   var url = "http://www.yourwebsite.com/hemangtest/";
+   request(url, function (error, response, htmlBody) {
+	if (!error && response.statusCode == 200) {
+	    var $ = cheerio.load(htmlBody);
+
+		var allPageLinks = [];
+		var allATag = $("table tr > td > a").html();
+		$('table tr > td > a').each(function (i, element) {
+		  var objPage = {};
+		  var linkHref = $(this).attr("href").toLowerCase();
+		  
+		  if (linkHref.indexOf(".html") > 0) {
+		      objPage.PageLink = url + $(this).attr("href");
+		      allPageLinks.push(objPage);
+		  }
+		});
+        
+		GetEachPageInformation(allPageLinks);
+
+		res.send("All Files in progress");
+	}
+	else 
+	{
+		res.send("We’ve encountered an error: " + error);
+	}
+ });
+});
+
+   
+app.get('/viewOrders/', function (req, res) {
+    res.send("Orders goes here");
+});
+
+function GetEachPageInformation(arrPages)
+{
+    arrPages.forEach(function (objPage) {
+        request(objPage.PageLink, function (error, response, htmlBody) {
+            if (!error && response.statusCode == 200) {
+                GetOrderInformation(htmlBody);
+            }
+            else {
+                console.log("We’ve encountered an error: " + error);
+            }
+        });
+   });
+}
+
+function GetOrderInformation(htmlBody)
+{
+    var $ = cheerio.load(htmlBody);
+
+    var PONumberNo = $("h1").eq(0).text();
+    var POText = "Purchase Order #";
+    if (PONumberNo.indexOf(POText) > 0) {
+        PONumberNo = PONumberNo.substring(PONumberNo.indexOf(POText) + POText.length).trim();
+    }
+
+    var orderNumber = '';
+    var orderDate = '';
+    var expectedDeliveryDate = '';
+    var storeNo = '';
+    var accountNo = '';
+    var subTeam = '';
+    var buyer = '';
+
+    var scrapResult = [];
+    $("table table").eq(0).find("tr").each(function (i, element) {
+        var tdFirst = $(this).find("td").eq(0);
+        var tdText = $(tdFirst).text().trim().toLowerCase();
+        switch (tdText) {
+            case "order number:":
+                orderNumber = $(tdFirst).next().text();
+                break;
+            case "order date:":
+                orderDate = $(tdFirst).next().text();
+                break;
+            case "expected delivery date:":
+                expectedDeliveryDate = $(tdFirst).next().text();
+                break;
+            case "store no:":
+                storeNo = $(tdFirst).next().text();
+                break;
+            case "account no:":
+                accountNo = $(tdFirst).next().text();
+                break;
+            case "subteam:":
+                subTeam = $(tdFirst).next().text();
+                break;
+            case "buyer:":
+                buyer = $(tdFirst).next().text();
+                break;
+        }
+    });
+
+    var arrProducts = [];
+
+    $("table[width='90%'] tr").each(function (i, element) {
+        if (i > 0) //Header row
+        {
+            var lineNo = $(this).find("td").eq(0).text().trim();
+            var ItemNo = $(this).find("td").eq(1).text();
+            var qty = $(this).find("td").eq(2).text();
+            var upcNo = $(this).find("td").eq(6).text();
+
+            if (!isNaN(lineNo) && lineNo != '')
+            {
+               scrapResult = [
+                    PONumberNo,
+                    storeNo,
+                    subTeam,
+                    ItemNo,
+                    orderDate,
+                    qty
+                ];
+
+                arrProducts.push(scrapResult);
+            }
+        }
+    });
+
+    //Insert record into database
+    var myQuery = DBConnection.query("insert into orderinformation (PONo,StoreNo,SubTeam,ItemNo,OrderDate,Qty) VALUES  ?", [arrProducts], function (err, res) {
+        if (err) {
+            console.log(err);
+        }
+        else {
+            console.log(myQuery.sql);
+        }
+    });
+    
+}
+
+var server= app.listen(3000,function(){
+  console.log('listing on port 3000');
+});
