@@ -1,0 +1,553 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'oracledb' ]
+2 info using npm@2.14.7
+3 info using node@v4.2.3
+4 verbose install initial load of /home/hemang/SampleApp/package.json
+5 warn package.json sampleapp@1.0.0 No repository field.
+6 verbose installManyTop reading scoped package data from /home/hemang/SampleApp/node_modules/cheerio/package.json
+7 verbose installManyTop reading scoped package data from /home/hemang/SampleApp/node_modules/express/package.json
+8 verbose installManyTop reading scoped package data from /home/hemang/SampleApp/node_modules/mongoose/package.json
+9 verbose installManyTop reading scoped package data from /home/hemang/SampleApp/node_modules/mysql/package.json
+10 verbose installManyTop reading scoped package data from /home/hemang/SampleApp/node_modules/request/package.json
+11 verbose readDependencies loading dependencies from /home/hemang/SampleApp/package.json
+12 silly cache add args [ 'oracledb', null ]
+13 verbose cache add spec oracledb
+14 silly cache add parsed spec Result {
+14 silly cache add   raw: 'oracledb',
+14 silly cache add   scope: null,
+14 silly cache add   name: 'oracledb',
+14 silly cache add   rawSpec: '',
+14 silly cache add   spec: '*',
+14 silly cache add   type: 'range' }
+15 silly addNamed oracledb@*
+16 verbose addNamed "*" is a valid semver range for oracledb
+17 silly addNameRange { name: 'oracledb', range: '*', hasData: false }
+18 silly mapToRegistry name oracledb
+19 silly mapToRegistry using default registry
+20 silly mapToRegistry registry https://registry.npmjs.org/
+21 silly mapToRegistry uri https://registry.npmjs.org/oracledb
+22 verbose addNameRange registry:https://registry.npmjs.org/oracledb not in flight; fetching
+23 verbose request uri https://registry.npmjs.org/oracledb
+24 verbose request no auth needed
+25 info attempt registry request try #1 at 11:37:43
+26 verbose request id 2196c3a6ce8ae12d
+27 verbose etag "3J9DJ8NFXOYNT3GVNPRWXHPL3"
+28 http request GET https://registry.npmjs.org/oracledb
+29 http 304 https://registry.npmjs.org/oracledb
+30 verbose headers { date: 'Mon, 07 Dec 2015 16:37:43 GMT',
+30 verbose headers   via: '1.1 varnish',
+30 verbose headers   'cache-control': 'max-age=60',
+30 verbose headers   etag: '"3J9DJ8NFXOYNT3GVNPRWXHPL3"',
+30 verbose headers   age: '0',
+30 verbose headers   connection: 'keep-alive',
+30 verbose headers   'x-served-by': 'cache-atl6228-ATL',
+30 verbose headers   'x-cache': 'MISS',
+30 verbose headers   'x-cache-hits': '0',
+30 verbose headers   'x-timer': 'S1449506263.726424,VS0,VE96',
+30 verbose headers   vary: 'Accept' }
+31 silly get cb [ 304,
+31 silly get   { date: 'Mon, 07 Dec 2015 16:37:43 GMT',
+31 silly get     via: '1.1 varnish',
+31 silly get     'cache-control': 'max-age=60',
+31 silly get     etag: '"3J9DJ8NFXOYNT3GVNPRWXHPL3"',
+31 silly get     age: '0',
+31 silly get     connection: 'keep-alive',
+31 silly get     'x-served-by': 'cache-atl6228-ATL',
+31 silly get     'x-cache': 'MISS',
+31 silly get     'x-cache-hits': '0',
+31 silly get     'x-timer': 'S1449506263.726424,VS0,VE96',
+31 silly get     vary: 'Accept' } ]
+32 verbose etag https://registry.npmjs.org/oracledb from cache
+33 verbose get saving oracledb to /home/hemang/.npm/registry.npmjs.org/oracledb/.cache.json
+34 silly addNameRange number 2 { name: 'oracledb', range: '*', hasData: true }
+35 silly addNameRange versions [ 'oracledb',
+35 silly addNameRange   [ '0.2.4', '0.6.0', '0.7.0', '1.0.0', '1.1.0', '1.4.0' ] ]
+36 silly addNamed oracledb@1.4.0
+37 verbose addNamed "1.4.0" is a plain semver version for oracledb
+38 silly cache afterAdd oracledb@1.4.0
+39 verbose afterAdd /home/hemang/.npm/oracledb/1.4.0/package/package.json not in flight; writing
+40 verbose afterAdd /home/hemang/.npm/oracledb/1.4.0/package/package.json written
+41 silly install resolved [ { name: 'oracledb',
+41 silly install resolved     version: '1.4.0',
+41 silly install resolved     description: 'Oracle Database driver by Oracle Corp.',
+41 silly install resolved     license: 'Apache-2.0',
+41 silly install resolved     homepage: 'http://www.oracle.com/technetwork/database/database-technologies/scripting-languages/node_js/',
+41 silly install resolved     keywords:
+41 silly install resolved      [ 'oracledb',
+41 silly install resolved        'dboracle',
+41 silly install resolved        'Node.js',
+41 silly install resolved        'SQL',
+41 silly install resolved        'PL/SQL',
+41 silly install resolved        'connection',
+41 silly install resolved        'connectivity',
+41 silly install resolved        'OCI',
+41 silly install resolved        'client',
+41 silly install resolved        'plugin',
+41 silly install resolved        'library',
+41 silly install resolved        'driver',
+41 silly install resolved        'add-on',
+41 silly install resolved        'extension',
+41 silly install resolved        'binding',
+41 silly install resolved        'interface',
+41 silly install resolved        'adapter',
+41 silly install resolved        'module',
+41 silly install resolved        'DB',
+41 silly install resolved        'official',
+41 silly install resolved        'Database',
+41 silly install resolved        'Oracle' ],
+41 silly install resolved     repository:
+41 silly install resolved      { type: 'git',
+41 silly install resolved        url: 'git://github.com/oracle/node-oracledb.git' },
+41 silly install resolved     dependencies: { nan: '~2.1.0' },
+41 silly install resolved     devDependencies: { mocha: '~2.2.5', should: '~6.0.1', async: '~0.9.0' },
+41 silly install resolved     scripts:
+41 silly install resolved      { test: 'mocha -R spec --timeout 10000 test/*.js',
+41 silly install resolved        testWindows: 'mocha -R spec --timeout 0 test\\*.js',
+41 silly install resolved        install: 'node-gyp rebuild' },
+41 silly install resolved     engines: { node: '>=0.10.28 <6' },
+41 silly install resolved     maintainers: [ [Object], [Object] ],
+41 silly install resolved     bugs: { url: 'https://github.com/oracle/node-oracledb/issues' },
+41 silly install resolved     main: './index.js',
+41 silly install resolved     gypfile: true,
+41 silly install resolved     _id: 'oracledb@1.4.0',
+41 silly install resolved     _shasum: 'd105440218b36e05149f4bbb88d67842eebc364c',
+41 silly install resolved     _resolved: 'https://registry.npmjs.org/oracledb/-/oracledb-1.4.0.tgz',
+41 silly install resolved     _from: 'oracledb@*',
+41 silly install resolved     _npmVersion: '2.14.7',
+41 silly install resolved     _nodeVersion: '4.2.2',
+41 silly install resolved     _npmUser: { name: 'cjbj', email: 'christopher.jones@oracle.com' },
+41 silly install resolved     dist:
+41 silly install resolved      { shasum: 'd105440218b36e05149f4bbb88d67842eebc364c',
+41 silly install resolved        tarball: 'http://registry.npmjs.org/oracledb/-/oracledb-1.4.0.tgz' },
+41 silly install resolved     directories: {},
+41 silly install resolved     readme: 'ERROR: No README data found!' } ]
+42 info install oracledb@1.4.0 into /home/hemang/SampleApp
+43 info installOne oracledb@1.4.0
+44 verbose installOne of oracledb to /home/hemang/SampleApp not in flight; installing
+45 verbose lock using /home/hemang/.npm/_locks/oracledb-f99a0d5469b52e6f.lock for /home/hemang/SampleApp/node_modules/oracledb
+46 silly install write writing oracledb 1.4.0 to /home/hemang/SampleApp/node_modules/oracledb
+47 verbose unbuild node_modules/oracledb
+48 silly gentlyRm /home/hemang/SampleApp/node_modules/oracledb is being purged from base /home/hemang/SampleApp
+49 verbose gentlyRm don't care about contents; nuking /home/hemang/SampleApp/node_modules/oracledb
+50 verbose tar unpack /home/hemang/.npm/oracledb/1.4.0/package.tgz
+51 verbose tar unpacking to /home/hemang/SampleApp/node_modules/oracledb
+52 silly gentlyRm /home/hemang/SampleApp/node_modules/oracledb is being purged
+53 verbose gentlyRm don't care about contents; nuking /home/hemang/SampleApp/node_modules/oracledb
+54 silly gunzTarPerm modes [ '755', '644' ]
+55 silly gunzTarPerm extractEntry package.json
+56 silly gunzTarPerm extractEntry README.md
+57 silly gunzTarPerm extractEntry index.js
+58 silly gunzTarPerm extractEntry CHANGELOG.md
+59 silly gunzTarPerm extractEntry LICENSE.md
+60 silly gunzTarPerm extractEntry binding.gyp
+61 silly gunzTarPerm extractEntry lib/oracledb.js
+62 silly gunzTarPerm extractEntry src/dpi/include/dpi.h
+63 silly gunzTarPerm extractEntry src/dpi/include/dpiCommon.h
+64 silly gunzTarPerm extractEntry src/dpi/include/dpiConn.h
+65 silly gunzTarPerm extractEntry src/dpi/include/dpiDateTimeArray.h
+66 silly gunzTarPerm extractEntry src/dpi/include/dpiEnv.h
+67 silly gunzTarPerm extractEntry src/dpi/include/dpiException.h
+68 silly gunzTarPerm extractEntry src/dpi/include/dpiLob.h
+69 silly gunzTarPerm extractEntry src/dpi/include/dpiPool.h
+70 silly gunzTarPerm extractEntry src/dpi/include/dpiStmt.h
+71 silly gunzTarPerm extractEntry src/dpi/src/dpiExceptionImpl.cpp
+72 silly gunzTarPerm extractEntry src/dpi/src/dpiCommon.cpp
+73 silly gunzTarPerm extractEntry src/dpi/src/dpiConnImpl.h
+74 silly gunzTarPerm extractEntry src/dpi/src/dpiDateTimeArrayImpl.cpp
+75 silly gunzTarPerm extractEntry src/dpi/src/dpiDateTimeArrayImpl.h
+76 silly gunzTarPerm extractEntry src/dpi/src/dpiEnv.cpp
+77 silly gunzTarPerm extractEntry src/dpi/src/dpiEnvImpl.cpp
+78 silly gunzTarPerm extractEntry src/dpi/src/dpiEnvImpl.h
+79 silly gunzTarPerm extractEntry src/dpi/src/dpiException.cpp
+80 silly gunzTarPerm extractEntry src/dpi/src/dpiConnImpl.cpp
+81 silly gunzTarPerm extractEntry src/dpi/src/dpiExceptionImpl.h
+82 silly gunzTarPerm extractEntry src/dpi/src/dpiLob.cpp
+83 silly gunzTarPerm extractEntry src/dpi/src/dpiPoolImpl.cpp
+84 silly gunzTarPerm extractEntry src/dpi/src/dpiPoolImpl.h
+85 silly gunzTarPerm extractEntry src/dpi/src/dpiStmtImpl.cpp
+86 silly gunzTarPerm extractEntry src/dpi/src/dpiStmtImpl.h
+87 silly gunzTarPerm extractEntry src/dpi/src/dpiUtils.cpp
+88 silly gunzTarPerm extractEntry src/dpi/src/dpiUtils.h
+89 silly gunzTarPerm extractEntry src/njs/src/njsOracle.cpp
+90 silly gunzTarPerm extractEntry src/njs/src/njsConnection.cpp
+91 silly gunzTarPerm extractEntry src/njs/src/njsIntLob.cpp
+92 silly gunzTarPerm extractEntry src/njs/src/njsIntLob.h
+93 silly gunzTarPerm extractEntry src/njs/src/njsMessages.cpp
+94 silly gunzTarPerm extractEntry src/njs/src/njsMessages.h
+95 silly gunzTarPerm extractEntry src/njs/src/njsConnection.h
+96 silly gunzTarPerm extractEntry src/njs/src/njsOracle.h
+97 silly gunzTarPerm extractEntry src/njs/src/njsPool.cpp
+98 silly gunzTarPerm extractEntry src/njs/src/njsPool.h
+99 silly gunzTarPerm extractEntry src/njs/src/njsResultSet.cpp
+100 silly gunzTarPerm extractEntry src/njs/src/njsResultSet.h
+101 silly gunzTarPerm extractEntry src/njs/src/njsUtils.h
+102 silly gunzTarPerm extractEntry test/README.md
+103 silly gunzTarPerm extractEntry test/dataTypeNumber.js
+104 silly gunzTarPerm extractEntry test/dataTypeNumber2.js
+105 silly gunzTarPerm extractEntry test/dataTypeNvarchar2.js
+106 silly gunzTarPerm extractEntry test/dataTypeNchar.js
+107 silly gunzTarPerm extractEntry test/dataTypeRowid.js
+108 silly gunzTarPerm extractEntry test/accessTerminatedPoolAttributes.js
+109 silly gunzTarPerm extractEntry test/dataTypeTimestamp2.js
+110 silly gunzTarPerm extractEntry test/dataTypeTimestamp3.js
+111 silly gunzTarPerm extractEntry test/dataTypeTimestamp4.js
+112 silly gunzTarPerm extractEntry test/dataTypeFloat2.js
+113 silly gunzTarPerm extractEntry test/dataTypeTimestamp5.js
+114 silly gunzTarPerm extractEntry test/dataTypeFloat.js
+115 silly gunzTarPerm extractEntry test/dataTypeTimestamp6.js
+116 silly gunzTarPerm extractEntry test/dataTypeDate.js
+117 silly gunzTarPerm extractEntry test/dataTypeVarchar2.js
+118 silly gunzTarPerm extractEntry test/dataTypeClob.js
+119 silly gunzTarPerm extractEntry test/dbConfig.js
+120 silly gunzTarPerm extractEntry test/dataTypeChar.js
+121 silly gunzTarPerm extractEntry test/dmlReturning.js
+122 silly gunzTarPerm extractEntry test/dataTypeBlob.js
+123 silly gunzTarPerm extractEntry test/examples.js
+124 silly gunzTarPerm extractEntry test/dataTypeBinaryFloat.js
+125 silly gunzTarPerm extractEntry test/externalAuthentication.js
+126 silly gunzTarPerm extractEntry test/dataTypeBinaryDouble.js
+127 silly gunzTarPerm extractEntry test/fetchAs.js
+128 silly gunzTarPerm extractEntry test/dataTypeAssist.js
+129 silly gunzTarPerm extractEntry test/releaseAfterFailingTerminate.js
+130 silly gunzTarPerm extractEntry test/connection.js
+131 silly gunzTarPerm extractEntry test/getConnAfterPoolTerminate.js
+132 silly gunzTarPerm extractEntry test/columnMetadata.js
+133 silly gunzTarPerm extractEntry test/properties.js
+134 silly gunzTarPerm extractEntry test/resultSet1.js
+135 silly gunzTarPerm extractEntry test/lobResultSet.js
+136 silly gunzTarPerm extractEntry test/clobPlsqlString.js
+137 silly gunzTarPerm extractEntry test/nestedCursor.js
+138 silly gunzTarPerm extractEntry test/checkClassesTypes.js
+139 silly gunzTarPerm extractEntry test/nullColumnValues.js
+140 silly gunzTarPerm extractEntry test/binding.js
+141 silly gunzTarPerm extractEntry test/pool.js
+142 silly gunzTarPerm extractEntry test/autoCommitForSelect.js
+143 silly gunzTarPerm extractEntry test/poolTimeout.js
+144 silly gunzTarPerm extractEntry test/autoCommit.js
+145 silly gunzTarPerm extractEntry test/poolValidityAfterFailingTerminate.js
+146 silly gunzTarPerm extractEntry test/dataTypeRaw.js
+147 silly gunzTarPerm extractEntry test/resultSet2.js
+148 silly gunzTarPerm extractEntry test/dataTypeTimestamp1.js
+149 silly gunzTarPerm extractEntry test/list.txt
+150 silly gunzTarPerm extractEntry test/fuzzydinosaur.jpg
+151 silly gunzTarPerm extractEntry test/clobexample.txt
+152 verbose write writing to /home/hemang/SampleApp/node_modules/oracledb/package.json
+153 info preinstall oracledb@1.4.0
+154 verbose readDependencies loading dependencies from /home/hemang/SampleApp/node_modules/oracledb/package.json
+155 silly prepareForInstallMany adding nan@~2.1.0 from oracledb dependencies
+156 verbose readDependencies loading dependencies from /home/hemang/SampleApp/node_modules/oracledb/package.json
+157 silly cache add args [ 'nan@~2.1.0', null ]
+158 verbose cache add spec nan@~2.1.0
+159 silly cache add parsed spec Result {
+159 silly cache add   raw: 'nan@~2.1.0',
+159 silly cache add   scope: null,
+159 silly cache add   name: 'nan',
+159 silly cache add   rawSpec: '~2.1.0',
+159 silly cache add   spec: '>=2.1.0 <2.2.0',
+159 silly cache add   type: 'range' }
+160 silly addNamed nan@>=2.1.0 <2.2.0
+161 verbose addNamed ">=2.1.0 <2.2.0" is a valid semver range for nan
+162 silly addNameRange { name: 'nan', range: '>=2.1.0 <2.2.0', hasData: false }
+163 silly mapToRegistry name nan
+164 silly mapToRegistry using default registry
+165 silly mapToRegistry registry https://registry.npmjs.org/
+166 silly mapToRegistry uri https://registry.npmjs.org/nan
+167 verbose addNameRange registry:https://registry.npmjs.org/nan not in flight; fetching
+168 verbose request uri https://registry.npmjs.org/nan
+169 verbose request no auth needed
+170 info attempt registry request try #1 at 11:37:44
+171 verbose etag "7CEDVJA24M9BXRU7SU6WRSW4M"
+172 http request GET https://registry.npmjs.org/nan
+173 http 304 https://registry.npmjs.org/nan
+174 verbose headers { date: 'Mon, 07 Dec 2015 16:37:44 GMT',
+174 verbose headers   via: '1.1 varnish',
+174 verbose headers   'cache-control': 'max-age=60',
+174 verbose headers   etag: '"7CEDVJA24M9BXRU7SU6WRSW4M"',
+174 verbose headers   age: '29',
+174 verbose headers   connection: 'keep-alive',
+174 verbose headers   'x-served-by': 'cache-atl6222-ATL',
+174 verbose headers   'x-cache': 'HIT',
+174 verbose headers   'x-cache-hits': '4',
+174 verbose headers   'x-timer': 'S1449506264.367824,VS0,VE0',
+174 verbose headers   vary: 'Accept' }
+175 silly get cb [ 304,
+175 silly get   { date: 'Mon, 07 Dec 2015 16:37:44 GMT',
+175 silly get     via: '1.1 varnish',
+175 silly get     'cache-control': 'max-age=60',
+175 silly get     etag: '"7CEDVJA24M9BXRU7SU6WRSW4M"',
+175 silly get     age: '29',
+175 silly get     connection: 'keep-alive',
+175 silly get     'x-served-by': 'cache-atl6222-ATL',
+175 silly get     'x-cache': 'HIT',
+175 silly get     'x-cache-hits': '4',
+175 silly get     'x-timer': 'S1449506264.367824,VS0,VE0',
+175 silly get     vary: 'Accept' } ]
+176 verbose etag https://registry.npmjs.org/nan from cache
+177 verbose get saving nan to /home/hemang/.npm/registry.npmjs.org/nan/.cache.json
+178 silly addNameRange number 2 { name: 'nan', range: '>=2.1.0 <2.2.0', hasData: true }
+179 silly addNameRange versions [ 'nan',
+179 silly addNameRange   [ '0.3.0-wip',
+179 silly addNameRange     '0.3.0-wip2',
+179 silly addNameRange     '0.3.0',
+179 silly addNameRange     '0.3.1',
+179 silly addNameRange     '0.3.2',
+179 silly addNameRange     '0.4.0',
+179 silly addNameRange     '0.4.1',
+179 silly addNameRange     '0.4.2',
+179 silly addNameRange     '0.4.3',
+179 silly addNameRange     '0.4.4',
+179 silly addNameRange     '0.5.0',
+179 silly addNameRange     '0.5.1',
+179 silly addNameRange     '0.5.2',
+179 silly addNameRange     '0.6.0',
+179 silly addNameRange     '0.7.0',
+179 silly addNameRange     '0.7.1',
+179 silly addNameRange     '0.8.0',
+179 silly addNameRange     '1.0.0',
+179 silly addNameRange     '1.1.0',
+179 silly addNameRange     '1.1.1',
+179 silly addNameRange     '1.1.2',
+179 silly addNameRange     '1.2.0',
+179 silly addNameRange     '1.3.0',
+179 silly addNameRange     '1.4.0',
+179 silly addNameRange     '1.4.1',
+179 silly addNameRange     '1.5.0',
+179 silly addNameRange     '1.4.2',
+179 silly addNameRange     '1.4.3',
+179 silly addNameRange     '1.5.1',
+179 silly addNameRange     '1.5.2',
+179 silly addNameRange     '1.6.0',
+179 silly addNameRange     '1.5.3',
+179 silly addNameRange     '1.6.1',
+179 silly addNameRange     '1.6.2',
+179 silly addNameRange     '1.7.0',
+179 silly addNameRange     '1.8.0',
+179 silly addNameRange     '1.8.1',
+179 silly addNameRange     '1.8.2',
+179 silly addNameRange     '1.8.3',
+179 silly addNameRange     '1.8.4',
+179 silly addNameRange     '1.9.0',
+179 silly addNameRange     '2.0.0',
+179 silly addNameRange     '2.0.1',
+179 silly addNameRange     '2.0.2',
+179 silly addNameRange     '2.0.3',
+179 silly addNameRange     '2.0.4',
+179 silly addNameRange     '2.0.5',
+179 silly addNameRange     '2.0.6',
+179 silly addNameRange     '2.0.7',
+179 silly addNameRange     '2.0.8',
+179 silly addNameRange     '2.0.9',
+179 silly addNameRange     '2.1.0' ] ]
+180 silly addNamed nan@2.1.0
+181 verbose addNamed "2.1.0" is a plain semver version for nan
+182 silly cache afterAdd nan@2.1.0
+183 verbose afterAdd /home/hemang/.npm/nan/2.1.0/package/package.json not in flight; writing
+184 verbose afterAdd /home/hemang/.npm/nan/2.1.0/package/package.json written
+185 silly install resolved [ { name: 'nan',
+185 silly install resolved     version: '2.1.0',
+185 silly install resolved     description: 'Native Abstractions for Node.js: C++ header for Node 0.8 -> 4 compatibility',
+185 silly install resolved     main: 'include_dirs.js',
+185 silly install resolved     repository: { type: 'git', url: 'git://github.com/nodejs/nan.git' },
+185 silly install resolved     scripts:
+185 silly install resolved      { test: 'tap --gc test/js/*-test.js',
+185 silly install resolved        'rebuild-tests': 'node-gyp rebuild --msvs_version=2013 --directory test',
+185 silly install resolved        docs: 'doc/.build.sh' },
+185 silly install resolved     contributors:
+185 silly install resolved      [ [Object],
+185 silly install resolved        [Object],
+185 silly install resolved        [Object],
+185 silly install resolved        [Object],
+185 silly install resolved        [Object],
+185 silly install resolved        [Object],
+185 silly install resolved        [Object] ],
+185 silly install resolved     devDependencies:
+185 silly install resolved      { bindings: '~1.2.1',
+185 silly install resolved        commander: '^2.8.1',
+185 silly install resolved        glob: '^5.0.14',
+185 silly install resolved        'node-gyp': '~3.0.1',
+185 silly install resolved        tap: '~0.7.1',
+185 silly install resolved        xtend: '~4.0.0' },
+185 silly install resolved     license: 'MIT',
+185 silly install resolved     bugs: { url: 'https://github.com/nodejs/nan/issues' },
+185 silly install resolved     homepage: 'https://github.com/nodejs/nan#readme',
+185 silly install resolved     _id: 'nan@2.1.0',
+185 silly install resolved     _shasum: '020a7ccedc63fdee85f85967d5607849e74abbe8',
+185 silly install resolved     _resolved: 'https://registry.npmjs.org/nan/-/nan-2.1.0.tgz',
+185 silly install resolved     _from: 'nan@>=2.1.0 <2.2.0',
+185 silly install resolved     _npmVersion: '3.3.5',
+185 silly install resolved     _nodeVersion: '4.1.2',
+185 silly install resolved     _npmUser: { name: 'kkoopa', email: 'bbyholm@abo.fi' },
+185 silly install resolved     dist:
+185 silly install resolved      { shasum: '020a7ccedc63fdee85f85967d5607849e74abbe8',
+185 silly install resolved        tarball: 'http://registry.npmjs.org/nan/-/nan-2.1.0.tgz' },
+185 silly install resolved     maintainers: [ [Object], [Object] ],
+185 silly install resolved     directories: {},
+185 silly install resolved     readme: 'ERROR: No README data found!' } ]
+186 info install nan@2.1.0 into /home/hemang/SampleApp/node_modules/oracledb
+187 info installOne nan@2.1.0
+188 verbose installOne of nan to /home/hemang/SampleApp/node_modules/oracledb not in flight; installing
+189 verbose lock using /home/hemang/.npm/_locks/nan-0e3f3b287ca4db1f.lock for /home/hemang/SampleApp/node_modules/oracledb/node_modules/nan
+190 silly install write writing nan 2.1.0 to /home/hemang/SampleApp/node_modules/oracledb/node_modules/nan
+191 verbose unbuild node_modules/oracledb/node_modules/nan
+192 silly gentlyRm /home/hemang/SampleApp/node_modules/oracledb/node_modules/nan is being purged from base /home/hemang/SampleApp
+193 verbose gentlyRm don't care about contents; nuking /home/hemang/SampleApp/node_modules/oracledb/node_modules/nan
+194 verbose tar unpack /home/hemang/.npm/nan/2.1.0/package.tgz
+195 verbose tar unpacking to /home/hemang/SampleApp/node_modules/oracledb/node_modules/nan
+196 silly gentlyRm /home/hemang/SampleApp/node_modules/oracledb/node_modules/nan is being purged
+197 verbose gentlyRm don't care about contents; nuking /home/hemang/SampleApp/node_modules/oracledb/node_modules/nan
+198 silly gunzTarPerm modes [ '755', '644' ]
+199 silly gunzTarPerm extractEntry package.json
+200 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+201 silly gunzTarPerm extractEntry README.md
+202 silly gunzTarPerm modified mode [ 'README.md', 436, 420 ]
+203 silly gunzTarPerm extractEntry include_dirs.js
+204 silly gunzTarPerm modified mode [ 'include_dirs.js', 436, 420 ]
+205 silly gunzTarPerm extractEntry nan_converters.h
+206 silly gunzTarPerm modified mode [ 'nan_converters.h', 436, 420 ]
+207 silly gunzTarPerm extractEntry LICENSE.md
+208 silly gunzTarPerm modified mode [ 'LICENSE.md', 436, 420 ]
+209 silly gunzTarPerm extractEntry .dntrc
+210 silly gunzTarPerm modified mode [ '.dntrc', 436, 420 ]
+211 silly gunzTarPerm extractEntry appveyor.yml
+212 silly gunzTarPerm modified mode [ 'appveyor.yml', 436, 420 ]
+213 silly gunzTarPerm extractEntry doc/new.md
+214 silly gunzTarPerm modified mode [ 'doc/new.md', 436, 420 ]
+215 silly gunzTarPerm extractEntry doc/.build.sh
+216 silly gunzTarPerm modified mode [ 'doc/.build.sh', 509, 493 ]
+217 silly gunzTarPerm extractEntry doc/buffers.md
+218 silly gunzTarPerm modified mode [ 'doc/buffers.md', 436, 420 ]
+219 silly gunzTarPerm extractEntry doc/callback.md
+220 silly gunzTarPerm modified mode [ 'doc/callback.md', 436, 420 ]
+221 silly gunzTarPerm extractEntry doc/converters.md
+222 silly gunzTarPerm modified mode [ 'doc/converters.md', 436, 420 ]
+223 silly gunzTarPerm extractEntry doc/errors.md
+224 silly gunzTarPerm modified mode [ 'doc/errors.md', 436, 420 ]
+225 silly gunzTarPerm extractEntry doc/maybe_types.md
+226 silly gunzTarPerm modified mode [ 'doc/maybe_types.md', 436, 420 ]
+227 silly gunzTarPerm extractEntry doc/methods.md
+228 silly gunzTarPerm modified mode [ 'doc/methods.md', 436, 420 ]
+229 silly gunzTarPerm extractEntry doc/asyncworker.md
+230 silly gunzTarPerm modified mode [ 'doc/asyncworker.md', 436, 420 ]
+231 silly gunzTarPerm extractEntry doc/node_misc.md
+232 silly gunzTarPerm modified mode [ 'doc/node_misc.md', 436, 420 ]
+233 silly gunzTarPerm extractEntry doc/persistent.md
+234 silly gunzTarPerm modified mode [ 'doc/persistent.md', 436, 420 ]
+235 silly gunzTarPerm extractEntry doc/scopes.md
+236 silly gunzTarPerm modified mode [ 'doc/scopes.md', 436, 420 ]
+237 silly gunzTarPerm extractEntry doc/script.md
+238 silly gunzTarPerm modified mode [ 'doc/script.md', 436, 420 ]
+239 silly gunzTarPerm extractEntry doc/string_bytes.md
+240 silly gunzTarPerm modified mode [ 'doc/string_bytes.md', 436, 420 ]
+241 silly gunzTarPerm extractEntry doc/v8_internals.md
+242 silly gunzTarPerm modified mode [ 'doc/v8_internals.md', 436, 420 ]
+243 silly gunzTarPerm extractEntry doc/v8_misc.md
+244 silly gunzTarPerm modified mode [ 'doc/v8_misc.md', 436, 420 ]
+245 silly gunzTarPerm extractEntry nan.h
+246 silly gunzTarPerm modified mode [ 'nan.h', 436, 420 ]
+247 silly gunzTarPerm extractEntry nan_callbacks.h
+248 silly gunzTarPerm modified mode [ 'nan_callbacks.h', 436, 420 ]
+249 silly gunzTarPerm extractEntry nan_callbacks_12_inl.h
+250 silly gunzTarPerm modified mode [ 'nan_callbacks_12_inl.h', 436, 420 ]
+251 silly gunzTarPerm extractEntry nan_callbacks_pre_12_inl.h
+252 silly gunzTarPerm modified mode [ 'nan_callbacks_pre_12_inl.h', 436, 420 ]
+253 silly gunzTarPerm extractEntry nan_converters_43_inl.h
+254 silly gunzTarPerm modified mode [ 'nan_converters_43_inl.h', 436, 420 ]
+255 silly gunzTarPerm extractEntry nan_converters_pre_43_inl.h
+256 silly gunzTarPerm modified mode [ 'nan_converters_pre_43_inl.h', 436, 420 ]
+257 silly gunzTarPerm extractEntry nan_implementation_12_inl.h
+258 silly gunzTarPerm modified mode [ 'nan_implementation_12_inl.h', 436, 420 ]
+259 silly gunzTarPerm extractEntry nan_implementation_pre_12_inl.h
+260 silly gunzTarPerm modified mode [ 'nan_implementation_pre_12_inl.h', 436, 420 ]
+261 silly gunzTarPerm extractEntry nan_maybe_43_inl.h
+262 silly gunzTarPerm modified mode [ 'nan_maybe_43_inl.h', 436, 420 ]
+263 silly gunzTarPerm extractEntry nan_maybe_pre_43_inl.h
+264 silly gunzTarPerm modified mode [ 'nan_maybe_pre_43_inl.h', 436, 420 ]
+265 silly gunzTarPerm extractEntry nan_new.h
+266 silly gunzTarPerm modified mode [ 'nan_new.h', 436, 420 ]
+267 silly gunzTarPerm extractEntry nan_object_wrap.h
+268 silly gunzTarPerm modified mode [ 'nan_object_wrap.h', 436, 420 ]
+269 silly gunzTarPerm extractEntry nan_persistent_12_inl.h
+270 silly gunzTarPerm modified mode [ 'nan_persistent_12_inl.h', 436, 420 ]
+271 silly gunzTarPerm extractEntry nan_persistent_pre_12_inl.h
+272 silly gunzTarPerm modified mode [ 'nan_persistent_pre_12_inl.h', 436, 420 ]
+273 silly gunzTarPerm extractEntry nan_string_bytes.h
+274 silly gunzTarPerm modified mode [ 'nan_string_bytes.h', 436, 420 ]
+275 silly gunzTarPerm extractEntry nan_typedarray_contents.h
+276 silly gunzTarPerm modified mode [ 'nan_typedarray_contents.h', 436, 420 ]
+277 silly gunzTarPerm extractEntry nan_weak.h
+278 silly gunzTarPerm modified mode [ 'nan_weak.h', 436, 420 ]
+279 silly gunzTarPerm extractEntry CHANGELOG.md
+280 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 436, 420 ]
+281 silly gunzTarPerm extractEntry tools/package.json
+282 silly gunzTarPerm modified mode [ 'tools/package.json', 436, 420 ]
+283 silly gunzTarPerm extractEntry tools/README.md
+284 silly gunzTarPerm modified mode [ 'tools/README.md', 436, 420 ]
+285 silly gunzTarPerm extractEntry tools/1to2.js
+286 silly gunzTarPerm modified mode [ 'tools/1to2.js', 509, 493 ]
+287 verbose write writing to /home/hemang/SampleApp/node_modules/oracledb/node_modules/nan/package.json
+288 info preinstall nan@2.1.0
+289 verbose readDependencies loading dependencies from /home/hemang/SampleApp/node_modules/oracledb/node_modules/nan/package.json
+290 verbose readDependencies loading dependencies from /home/hemang/SampleApp/node_modules/oracledb/node_modules/nan/package.json
+291 silly install resolved []
+292 verbose about to build /home/hemang/SampleApp/node_modules/oracledb/node_modules/nan
+293 info build /home/hemang/SampleApp/node_modules/oracledb/node_modules/nan
+294 info linkStuff nan@2.1.0
+295 silly linkStuff nan@2.1.0 has /home/hemang/SampleApp/node_modules/oracledb/node_modules as its parent node_modules
+296 verbose linkBins nan@2.1.0
+297 verbose linkMans nan@2.1.0
+298 verbose rebuildBundles nan@2.1.0
+299 info install nan@2.1.0
+300 info postinstall nan@2.1.0
+301 verbose unlock done using /home/hemang/.npm/_locks/nan-0e3f3b287ca4db1f.lock for /home/hemang/SampleApp/node_modules/oracledb/node_modules/nan
+302 verbose about to build /home/hemang/SampleApp/node_modules/oracledb
+303 info build /home/hemang/SampleApp/node_modules/oracledb
+304 info linkStuff oracledb@1.4.0
+305 silly linkStuff oracledb@1.4.0 has /home/hemang/SampleApp/node_modules as its parent node_modules
+306 verbose linkBins oracledb@1.4.0
+307 verbose linkMans oracledb@1.4.0
+308 verbose rebuildBundles oracledb@1.4.0
+309 verbose rebuildBundles [ 'nan' ]
+310 info install oracledb@1.4.0
+311 verbose unsafe-perm in lifecycle true
+312 info oracledb@1.4.0 Failed to exec install script
+313 verbose unlock done using /home/hemang/.npm/_locks/oracledb-f99a0d5469b52e6f.lock for /home/hemang/SampleApp/node_modules/oracledb
+314 verbose stack Error: oracledb@1.4.0 install: `node-gyp rebuild`
+314 verbose stack Exit status 1
+314 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:214:16)
+314 verbose stack     at emitTwo (events.js:87:13)
+314 verbose stack     at EventEmitter.emit (events.js:172:7)
+314 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+314 verbose stack     at emitTwo (events.js:87:13)
+314 verbose stack     at ChildProcess.emit (events.js:172:7)
+314 verbose stack     at maybeClose (internal/child_process.js:818:16)
+314 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+315 verbose pkgid oracledb@1.4.0
+316 verbose cwd /home/hemang/SampleApp
+317 error Linux 3.16.0-4-amd64
+318 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "oracledb"
+319 error node v4.2.3
+320 error npm  v2.14.7
+321 error code ELIFECYCLE
+322 error oracledb@1.4.0 install: `node-gyp rebuild`
+322 error Exit status 1
+323 error Failed at the oracledb@1.4.0 install script 'node-gyp rebuild'.
+323 error This is most likely a problem with the oracledb package,
+323 error not with npm itself.
+323 error Tell the author that this fails on your system:
+323 error     node-gyp rebuild
+323 error You can get their info via:
+323 error     npm owner ls oracledb
+323 error There is likely additional logging output above.
+324 verbose exit [ 1, true ]
+325 verbose unbuild node_modules/oracledb
+326 info preuninstall oracledb@1.4.0
+327 info uninstall oracledb@1.4.0
+328 verbose unbuild rmStuff oracledb@1.4.0 from /home/hemang/SampleApp/node_modules
+329 info postuninstall oracledb@1.4.0
+330 silly gentlyRm /home/hemang/SampleApp/node_modules/oracledb is being purged from base /home/hemang/SampleApp
+331 verbose gentlyRm don't care about contents; nuking /home/hemang/SampleApp/node_modules/oracledb
+332 silly vacuum-fs purging /home/hemang/SampleApp/node_modules/oracledb
+333 silly vacuum-fs quitting because other entries in /home/hemang/SampleApp/node_modules

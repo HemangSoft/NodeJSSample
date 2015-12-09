@@ -8,7 +8,7 @@ var mysql = require('mysql');
 var DBConnection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'sa@1234',
+    password: 'hemangsoft',
     database: 'nodescraper'
 });
 
@@ -23,7 +23,7 @@ app.get('/',function(req,res){
 });
 
 app.get('/getAllLink/',function(req,res){
-   var url = "http://www.yourwebsite.com/hemangtest/";
+   var url = "http://www.dorasnaturals.com/hemangtest/";
    request(url, function (error, response, htmlBody) {
 	if (!error && response.statusCode == 200) {
 	    var $ = cheerio.load(htmlBody);
@@ -42,7 +42,7 @@ app.get('/getAllLink/',function(req,res){
         
 		GetEachPageInformation(allPageLinks);
 
-		res.send("All Files in progress");
+		res.send("SQLAPP: All Files in progress");
 	}
 	else 
 	{
@@ -144,17 +144,18 @@ function GetOrderInformation(htmlBody)
     });
 
     //Insert record into database
-    var myQuery = DBConnection.query("insert into orderinformation (PONo,StoreNo,SubTeam,ItemNo,OrderDate,Qty) VALUES  ?", [arrProducts], function (err, res) {
+    var myQuery = DBConnection.query("Insert into orderinformation (PONo,StoreNo,SubTeam,ItemNo,OrderDate,Qty) VALUES  ?", [arrProducts], function (err, res) {
         if (err) {
             console.log(err);
         }
         else {
-            console.log(myQuery.sql);
+            //console.log(myQuery.sql);
+			console.log(res.affectedRows +" Rows inserted");
         }
     });
     
 }
 
 var server= app.listen(3000,function(){
-  console.log('listing on port 3000');
+  console.log('MYSQL : listing on port 3000');
 });
